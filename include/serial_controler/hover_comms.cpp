@@ -11,7 +11,7 @@ void HoverComms::setup(const std::string &serial_device, int32_t baud_rate, int3
 {  
     serial_conn_.setPort(serial_device);
     serial_conn_.setBaudrate(baud_rate);
-    serial_conn_.setTimeout(10,timeout_ms,0,timeout_ms,0); 
+    serial_conn_.setTimeout(1000,timeout_ms,0,timeout_ms,0); 
     serial_conn_.open();
     // serial_conn_.(serial_device, baud_rate, serial::Timeout::simpleTimeout(timeout_ms));
 
@@ -100,14 +100,14 @@ void HoverComms::setMotorValues(double joints [2])
    
     uint8_t bytes [sizeof(write_msg) * 2] = 
         {
-        (write_msg.start >> 8) & 0xFF,  
-        (write_msg.start >> 0) & 0xFF,
-        (write_msg.steer >> 8) & 0xFF,  
-        (write_msg.steer >> 0) & 0xFF,
-        (write_msg.speed >> 8) & 0xFF,  
-        (write_msg.speed >> 0) & 0xFF,
-        (write_msg.checksum >> 8) & 0xFF,  
-        (write_msg.checksum >> 0) & 0xFF,
+        (write_msg.start >> 0) & 0xFF,  
+        (write_msg.start >> 8) & 0xFF,
+        (write_msg.steer >> 0) & 0xFF,  
+        (write_msg.steer >> 8) & 0xFF,
+        (write_msg.speed >> 0) & 0xFF,  
+        (write_msg.speed >> 8) & 0xFF,
+        (write_msg.checksum >> 0) & 0xFF,  
+        (write_msg.checksum >> 8) & 0xFF,
         };
 serial_conn_.write(bytes, sizeof(write_msg) );
 }
