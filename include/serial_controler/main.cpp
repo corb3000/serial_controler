@@ -30,12 +30,11 @@ int main()
     cout << read_msg.speedL_meas << " Speed L   \t";
     cout << read_msg.wheelR_cnt << " Cnt R   \t";
     cout << read_msg.wheelL_cnt << " Cnt L   \t";
+    cout << read_msg.wheelR_multR << " Mult R   \t";
+    cout << read_msg.wheelL_multL << " Mult L   \t";
     cout << read_msg.batVoltage << " Bat V   \t";
     cout << read_msg.boardTemp << " Tmp   \t";
     cout << read_msg.cmdLed << " LED   \t";
-    cout << read_msg.checksum << " CS   \r";
-
-
 
     sleep(0.02);//sleeps for 0.1 second
     }

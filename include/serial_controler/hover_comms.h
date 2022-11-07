@@ -16,9 +16,7 @@ public:
   void setup(const std::string &serial_device, int32_t baud_rate, int32_t timeout_ms);
   SerialFeedback readValues();
   void setMotorValues(double joints [2]);
-
-
-  bool connected() const { return serial_conn_.isOpen(); }
+  bool connected() const { return serial_conn_.isOpen(); } //proberbly not used 
 
   std::string sendMsg(const std::string &msg_to_send, bool print_output = false);
   SerialFeedback read_msg;
@@ -28,7 +26,7 @@ public:
 private:
   serial::Serial serial_conn_;  ///< Underlying serial connection
   void checkDecode();
-  static const uint8_t read_lenth = sizeof(read_msg)*2;
+  static const uint8_t read_lenth = 22;
   uint8_t read_buffer [read_lenth] = { };
 };
 

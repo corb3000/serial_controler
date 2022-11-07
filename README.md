@@ -1,4 +1,6 @@
-# diffdrive_arduino
+# hover_comms
 
 
-This node is designed to provide an interface between a `diff_drive_controller` from `ros_control` and an Arduino running firmware from `ros_arduino_bridge`.
+This node is designed to provide an interface between a `diff_drive_controller` from `ros_control` and a hover board running firmware from `alex-makarov
+/
+hoverboard-firmware-hack-FOC`.

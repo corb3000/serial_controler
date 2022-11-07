@@ -24,6 +24,8 @@ typedef struct {
    int16_t  speedL_meas;
    int16_t  wheelR_cnt;
    int16_t  wheelL_cnt; 
+   int16_t  wheelR_multR = 0;
+   int16_t  wheelL_multL = 0; 
    int16_t  batVoltage;
    int16_t  boardTemp;
    uint16_t cmdLed;

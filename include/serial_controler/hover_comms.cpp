@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <stdint.h>
 #include "hover_comms.h"
+#include "config.h"
+
 
 
 void HoverComms::setup(const std::string &serial_device, int32_t baud_rate, int32_t timeout_ms)
@@ -24,12 +26,14 @@ SerialFeedback HoverComms::readValues()
     if (len < read_lenth){
         if (len == 0)
         {
+            read_msg.start = 0
             return read_msg; //error;
         }
         else{
             if (serial_conn_.read(read_buffer, read_lenth) < read_lenth)
             {
                 // Failed second attempt
+                read_msg.start = 0
                 return read_msg; //error;
                 }
             }
@@ -39,6 +43,7 @@ SerialFeedback HoverComms::readValues()
         uint16_t start = (read_buffer[1] << 8) | read_buffer[0];
         if (start != START_FRAME)
         {
+                read_msg.start = 0
                 return read_msg; //error!
         }
 
@@ -66,9 +71,10 @@ SerialFeedback HoverComms::readValues()
         read_msg.boardTemp ^
         read_msg.cmdLed))
         {
+            read_msg.start = 0
             return read_msg; //error!
         }
-
+        encoder_update(read_msg.wheelR_cnt, read_msg.wheelL_cnt)
         return read_msg; //susess
 
     }
@@ -112,4 +118,23 @@ void HoverComms::setMotorValues(double joints [2])
 serial_conn_.write(bytes, sizeof(write_msg) );
 }
 
+void Hover::Comms::encoder_update (int16_t right, int16_t left) {
+
+    // Calculate wheel position in ticks, factoring in encoder wraps
+    if (right < ENCODER_LOW_WRAP && last_wheelcountR > ENCODER_HIGH_WRAP)
+        multR++;
+    else if (right > ENCODER_HIGH_WRAP && last_wheelcountR < ENCODER_LOW_WRAP)
+        multR--;
+
+    last_wheelcountR = right;
+    read_msg.wheelR_multR = multR;
+
+    if (left < ENCODER_LOW_WRAP && last_wheelcountL > ENCODER_HIGH_WRAP)
+        multL++;
+    else if (left > ENCODER_HIGH_WRAP && last_wheelcountL < ENCODER_LOW_WRAP)
+        multL--;
+
+    last_wheelcountL = left;
+    read_msg.wheelL_multL = multL;
+}
 
