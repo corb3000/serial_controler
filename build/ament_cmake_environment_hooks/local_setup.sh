@@ -151,9 +151,8 @@ if [ -z "$AMENT_RETURN_ENVIRONMENT_HOOKS" ]; then
 fi
 
 # list all environment hooks of this package
-ament_append_value AMENT_ENVIRONMENT_HOOKS "$AMENT_CURRENT_PREFIX/share/diffdrive_arduino/environment/ament_prefix_path.sh"
-ament_append_value AMENT_ENVIRONMENT_HOOKS "$AMENT_CURRENT_PREFIX/share/diffdrive_arduino/environment/library_path.sh"
-ament_append_value AMENT_ENVIRONMENT_HOOKS "$AMENT_CURRENT_PREFIX/share/diffdrive_arduino/environment/path.sh"
+ament_append_value AMENT_ENVIRONMENT_HOOKS "$AMENT_CURRENT_PREFIX/share/serial_controler/environment/ament_prefix_path.sh"
+ament_append_value AMENT_ENVIRONMENT_HOOKS "$AMENT_CURRENT_PREFIX/share/serial_controler/environment/path.sh"
 
 # source all shell-specific environment hooks of this package
 # if not returning them

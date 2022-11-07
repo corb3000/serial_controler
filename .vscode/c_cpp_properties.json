@@ -4,9 +4,10 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/tmp/usr/local/",
-                "/tmp/usr/local/include/",
-                "${workspaceFolder}"
+                "${workspaceFolder}",
+                "${workspaceFolder}/include/serial_controler",
+                "/usr/local/serial/tmp/usr/local/**",
+                "/usr/local/serial/tmp/usr/local/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

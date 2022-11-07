@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>diffdrive_arduino</name>
+  <name>serial_controler</name>
   <version>0.0.1</version>
   <description>Provides an interface between diff_drive_controller and an Arduino.</description>
 

@@ -1,4 +1,4 @@
-source;share/diffdrive_arduino/local_setup.bash
-source;share/diffdrive_arduino/local_setup.dsv
-source;share/diffdrive_arduino/local_setup.sh
-source;share/diffdrive_arduino/local_setup.zsh
+source;share/serial_controler/local_setup.bash
+source;share/serial_controler/local_setup.dsv
+source;share/serial_controler/local_setup.sh
+source;share/serial_controler/local_setup.zsh

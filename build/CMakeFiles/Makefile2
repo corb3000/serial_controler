@@ -63,8 +63,7 @@ CMAKE_BINARY_DIR = /home/bigshark/hover_driver/serial_controler/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/diffdrive_arduino.dir/all
-all: CMakeFiles/fake_robot.dir/all
+all: CMakeFiles/serial_controler.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,16 +72,15 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
-clean: CMakeFiles/diffdrive_arduino_uninstall.dir/clean
-clean: CMakeFiles/diffdrive_arduino.dir/clean
-clean: CMakeFiles/fake_robot.dir/clean
+clean: CMakeFiles/serial_controler_uninstall.dir/clean
+clean: CMakeFiles/serial_controler.dir/clean
 .PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/uninstall.dir
 
 # All Build rule for target.
-CMakeFiles/uninstall.dir/all: CMakeFiles/diffdrive_arduino_uninstall.dir/all
+CMakeFiles/uninstall.dir/all: CMakeFiles/serial_controler_uninstall.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bigshark/hover_driver/serial_controler/build/CMakeFiles --progress-num= "Built target uninstall"
@@ -105,82 +103,56 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/diffdrive_arduino_uninstall.dir
+# Target rules for target CMakeFiles/serial_controler_uninstall.dir
 
 # All Build rule for target.
-CMakeFiles/diffdrive_arduino_uninstall.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino_uninstall.dir/build.make CMakeFiles/diffdrive_arduino_uninstall.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino_uninstall.dir/build.make CMakeFiles/diffdrive_arduino_uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bigshark/hover_driver/serial_controler/build/CMakeFiles --progress-num= "Built target diffdrive_arduino_uninstall"
-.PHONY : CMakeFiles/diffdrive_arduino_uninstall.dir/all
+CMakeFiles/serial_controler_uninstall.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler_uninstall.dir/build.make CMakeFiles/serial_controler_uninstall.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler_uninstall.dir/build.make CMakeFiles/serial_controler_uninstall.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bigshark/hover_driver/serial_controler/build/CMakeFiles --progress-num= "Built target serial_controler_uninstall"
+.PHONY : CMakeFiles/serial_controler_uninstall.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/diffdrive_arduino_uninstall.dir/rule: cmake_check_build_system
+CMakeFiles/serial_controler_uninstall.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigshark/hover_driver/serial_controler/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/diffdrive_arduino_uninstall.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/serial_controler_uninstall.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigshark/hover_driver/serial_controler/build/CMakeFiles 0
-.PHONY : CMakeFiles/diffdrive_arduino_uninstall.dir/rule
+.PHONY : CMakeFiles/serial_controler_uninstall.dir/rule
 
 # Convenience name for target.
-diffdrive_arduino_uninstall: CMakeFiles/diffdrive_arduino_uninstall.dir/rule
-.PHONY : diffdrive_arduino_uninstall
+serial_controler_uninstall: CMakeFiles/serial_controler_uninstall.dir/rule
+.PHONY : serial_controler_uninstall
 
 # clean rule for target.
-CMakeFiles/diffdrive_arduino_uninstall.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino_uninstall.dir/build.make CMakeFiles/diffdrive_arduino_uninstall.dir/clean
-.PHONY : CMakeFiles/diffdrive_arduino_uninstall.dir/clean
+CMakeFiles/serial_controler_uninstall.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler_uninstall.dir/build.make CMakeFiles/serial_controler_uninstall.dir/clean
+.PHONY : CMakeFiles/serial_controler_uninstall.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/diffdrive_arduino.dir
+# Target rules for target CMakeFiles/serial_controler.dir
 
 # All Build rule for target.
-CMakeFiles/diffdrive_arduino.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bigshark/hover_driver/serial_controler/build/CMakeFiles --progress-num=1,2,3,4 "Built target diffdrive_arduino"
-.PHONY : CMakeFiles/diffdrive_arduino.dir/all
+CMakeFiles/serial_controler.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bigshark/hover_driver/serial_controler/build/CMakeFiles --progress-num=1,2,3 "Built target serial_controler"
+.PHONY : CMakeFiles/serial_controler.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/diffdrive_arduino.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigshark/hover_driver/serial_controler/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/diffdrive_arduino.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigshark/hover_driver/serial_controler/build/CMakeFiles 0
-.PHONY : CMakeFiles/diffdrive_arduino.dir/rule
-
-# Convenience name for target.
-diffdrive_arduino: CMakeFiles/diffdrive_arduino.dir/rule
-.PHONY : diffdrive_arduino
-
-# clean rule for target.
-CMakeFiles/diffdrive_arduino.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/clean
-.PHONY : CMakeFiles/diffdrive_arduino.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/fake_robot.dir
-
-# All Build rule for target.
-CMakeFiles/fake_robot.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bigshark/hover_driver/serial_controler/build/CMakeFiles --progress-num=5,6,7 "Built target fake_robot"
-.PHONY : CMakeFiles/fake_robot.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/fake_robot.dir/rule: cmake_check_build_system
+CMakeFiles/serial_controler.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigshark/hover_driver/serial_controler/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fake_robot.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/serial_controler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigshark/hover_driver/serial_controler/build/CMakeFiles 0
-.PHONY : CMakeFiles/fake_robot.dir/rule
+.PHONY : CMakeFiles/serial_controler.dir/rule
 
 # Convenience name for target.
-fake_robot: CMakeFiles/fake_robot.dir/rule
-.PHONY : fake_robot
+serial_controler: CMakeFiles/serial_controler.dir/rule
+.PHONY : serial_controler
 
 # clean rule for target.
-CMakeFiles/fake_robot.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/clean
-.PHONY : CMakeFiles/fake_robot.dir/clean
+CMakeFiles/serial_controler.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/clean
+.PHONY : CMakeFiles/serial_controler.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -185,142 +185,78 @@ uninstall/fast:
 .PHONY : uninstall/fast
 
 #=============================================================================
-# Target rules for targets named diffdrive_arduino_uninstall
+# Target rules for targets named serial_controler_uninstall
 
 # Build rule for target.
-diffdrive_arduino_uninstall: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 diffdrive_arduino_uninstall
-.PHONY : diffdrive_arduino_uninstall
+serial_controler_uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial_controler_uninstall
+.PHONY : serial_controler_uninstall
 
 # fast build rule for target.
-diffdrive_arduino_uninstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino_uninstall.dir/build.make CMakeFiles/diffdrive_arduino_uninstall.dir/build
-.PHONY : diffdrive_arduino_uninstall/fast
+serial_controler_uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler_uninstall.dir/build.make CMakeFiles/serial_controler_uninstall.dir/build
+.PHONY : serial_controler_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named diffdrive_arduino
+# Target rules for targets named serial_controler
 
 # Build rule for target.
-diffdrive_arduino: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 diffdrive_arduino
-.PHONY : diffdrive_arduino
+serial_controler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial_controler
+.PHONY : serial_controler
 
 # fast build rule for target.
-diffdrive_arduino/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/build
-.PHONY : diffdrive_arduino/fast
+serial_controler/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/build
+.PHONY : serial_controler/fast
 
-#=============================================================================
-# Target rules for targets named fake_robot
-
-# Build rule for target.
-fake_robot: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fake_robot
-.PHONY : fake_robot
-
-# fast build rule for target.
-fake_robot/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/build
-.PHONY : fake_robot/fast
-
-src/arduino_comms.o: src/arduino_comms.cpp.o
-.PHONY : src/arduino_comms.o
+include/serial_controler/hover_comms.o: include/serial_controler/hover_comms.cpp.o
+.PHONY : include/serial_controler/hover_comms.o
 
 # target to build an object file
-src/arduino_comms.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/src/arduino_comms.cpp.o
-.PHONY : src/arduino_comms.cpp.o
+include/serial_controler/hover_comms.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o
+.PHONY : include/serial_controler/hover_comms.cpp.o
 
-src/arduino_comms.i: src/arduino_comms.cpp.i
-.PHONY : src/arduino_comms.i
+include/serial_controler/hover_comms.i: include/serial_controler/hover_comms.cpp.i
+.PHONY : include/serial_controler/hover_comms.i
 
 # target to preprocess a source file
-src/arduino_comms.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/src/arduino_comms.cpp.i
-.PHONY : src/arduino_comms.cpp.i
+include/serial_controler/hover_comms.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.i
+.PHONY : include/serial_controler/hover_comms.cpp.i
 
-src/arduino_comms.s: src/arduino_comms.cpp.s
-.PHONY : src/arduino_comms.s
+include/serial_controler/hover_comms.s: include/serial_controler/hover_comms.cpp.s
+.PHONY : include/serial_controler/hover_comms.s
 
 # target to generate assembly for a file
-src/arduino_comms.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/src/arduino_comms.cpp.s
-.PHONY : src/arduino_comms.cpp.s
+include/serial_controler/hover_comms.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.s
+.PHONY : include/serial_controler/hover_comms.cpp.s
 
-src/diffdrive_arduino.o: src/diffdrive_arduino.cpp.o
-.PHONY : src/diffdrive_arduino.o
+include/serial_controler/main.o: include/serial_controler/main.cpp.o
+.PHONY : include/serial_controler/main.o
 
 # target to build an object file
-src/diffdrive_arduino.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/src/diffdrive_arduino.cpp.o
-.PHONY : src/diffdrive_arduino.cpp.o
+include/serial_controler/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o
+.PHONY : include/serial_controler/main.cpp.o
 
-src/diffdrive_arduino.i: src/diffdrive_arduino.cpp.i
-.PHONY : src/diffdrive_arduino.i
-
-# target to preprocess a source file
-src/diffdrive_arduino.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/src/diffdrive_arduino.cpp.i
-.PHONY : src/diffdrive_arduino.cpp.i
-
-src/diffdrive_arduino.s: src/diffdrive_arduino.cpp.s
-.PHONY : src/diffdrive_arduino.s
-
-# target to generate assembly for a file
-src/diffdrive_arduino.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/src/diffdrive_arduino.cpp.s
-.PHONY : src/diffdrive_arduino.cpp.s
-
-src/fake_robot.o: src/fake_robot.cpp.o
-.PHONY : src/fake_robot.o
-
-# target to build an object file
-src/fake_robot.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/src/fake_robot.cpp.o
-.PHONY : src/fake_robot.cpp.o
-
-src/fake_robot.i: src/fake_robot.cpp.i
-.PHONY : src/fake_robot.i
+include/serial_controler/main.i: include/serial_controler/main.cpp.i
+.PHONY : include/serial_controler/main.i
 
 # target to preprocess a source file
-src/fake_robot.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/src/fake_robot.cpp.i
-.PHONY : src/fake_robot.cpp.i
+include/serial_controler/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.i
+.PHONY : include/serial_controler/main.cpp.i
 
-src/fake_robot.s: src/fake_robot.cpp.s
-.PHONY : src/fake_robot.s
-
-# target to generate assembly for a file
-src/fake_robot.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/src/fake_robot.cpp.s
-.PHONY : src/fake_robot.cpp.s
-
-src/wheel.o: src/wheel.cpp.o
-.PHONY : src/wheel.o
-
-# target to build an object file
-src/wheel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/src/wheel.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/src/wheel.cpp.o
-.PHONY : src/wheel.cpp.o
-
-src/wheel.i: src/wheel.cpp.i
-.PHONY : src/wheel.i
-
-# target to preprocess a source file
-src/wheel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/src/wheel.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/src/wheel.cpp.i
-.PHONY : src/wheel.cpp.i
-
-src/wheel.s: src/wheel.cpp.s
-.PHONY : src/wheel.s
+include/serial_controler/main.s: include/serial_controler/main.cpp.s
+.PHONY : include/serial_controler/main.s
 
 # target to generate assembly for a file
-src/wheel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffdrive_arduino.dir/build.make CMakeFiles/diffdrive_arduino.dir/src/wheel.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/src/wheel.cpp.s
-.PHONY : src/wheel.cpp.s
+include/serial_controler/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.s
+.PHONY : include/serial_controler/main.cpp.s
 
 # Help Target
 help:
@@ -335,22 +271,15 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... diffdrive_arduino_uninstall"
+	@echo "... serial_controler_uninstall"
 	@echo "... uninstall"
-	@echo "... diffdrive_arduino"
-	@echo "... fake_robot"
-	@echo "... src/arduino_comms.o"
-	@echo "... src/arduino_comms.i"
-	@echo "... src/arduino_comms.s"
-	@echo "... src/diffdrive_arduino.o"
-	@echo "... src/diffdrive_arduino.i"
-	@echo "... src/diffdrive_arduino.s"
-	@echo "... src/fake_robot.o"
-	@echo "... src/fake_robot.i"
-	@echo "... src/fake_robot.s"
-	@echo "... src/wheel.o"
-	@echo "... src/wheel.i"
-	@echo "... src/wheel.s"
+	@echo "... serial_controler"
+	@echo "... include/serial_controler/hover_comms.o"
+	@echo "... include/serial_controler/hover_comms.i"
+	@echo "... include/serial_controler/hover_comms.s"
+	@echo "... include/serial_controler/main.o"
+	@echo "... include/serial_controler/main.i"
+	@echo "... include/serial_controler/main.s"
 .PHONY : help
 
 

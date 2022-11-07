@@ -1,7 +1,6 @@
 /home/bigshark/hover_driver/serial_controler/build/CMakeFiles/uninstall.dir
-/home/bigshark/hover_driver/serial_controler/build/CMakeFiles/diffdrive_arduino_uninstall.dir
-/home/bigshark/hover_driver/serial_controler/build/CMakeFiles/diffdrive_arduino.dir
-/home/bigshark/hover_driver/serial_controler/build/CMakeFiles/fake_robot.dir
+/home/bigshark/hover_driver/serial_controler/build/CMakeFiles/serial_controler_uninstall.dir
+/home/bigshark/hover_driver/serial_controler/build/CMakeFiles/serial_controler.dir
 /home/bigshark/hover_driver/serial_controler/build/CMakeFiles/test.dir
 /home/bigshark/hover_driver/serial_controler/build/CMakeFiles/edit_cache.dir
 /home/bigshark/hover_driver/serial_controler/build/CMakeFiles/rebuild_cache.dir
