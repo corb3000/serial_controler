@@ -4,8 +4,12 @@
 #include <vector>
 #include <stdio.h>
 #include <stdint.h>
+#include <iostream>
+#include <chrono>
+#include <thread>
 #include "hover_comms.h"
 #include "config.h"
+
 
 
 
@@ -13,7 +17,7 @@ void HoverComms::setup(const std::string &serial_device, int32_t baud_rate, int3
 {  
     serial_conn_.setPort(serial_device);
     serial_conn_.setBaudrate(baud_rate);
-    serial_conn_.setTimeout(1000,timeout_ms,0,timeout_ms,0); 
+    serial_conn_.setTimeout(0,timeout_ms,0,timeout_ms,0); 
     serial_conn_.open();
     // serial_conn_.(serial_device, baud_rate, serial::Timeout::simpleTimeout(timeout_ms));
 
@@ -22,42 +26,27 @@ void HoverComms::setup(const std::string &serial_device, int32_t baud_rate, int3
 
 SerialFeedback HoverComms::readValues()
 {
-    uint8_t len = serial_conn_.read(read_buffer, read_lenth);
-    if (len < read_lenth){
-        if (len == 0)
-        {
-            read_msg.start = 0
-            return read_msg; //error;
-        }
-        else{
-            if (serial_conn_.read(read_buffer, read_lenth) < read_lenth)
-            {
-                // Failed second attempt
-                read_msg.start = 0
-                return read_msg; //error;
-                }
-            }
-        }
-    else{
-        //check and decode
-        uint16_t start = (read_buffer[1] << 8) | read_buffer[0];
-        if (start != START_FRAME)
-        {
-                read_msg.start = 0
-                return read_msg; //error!
-        }
+    uint16_t start = 0;
+    do{
+        serial_conn_.flush();
+        serial_conn_.read(read_buffer, 2);
+        start = (read_buffer[1] << 8) | read_buffer[0];  
+    }
+    while (start != START_FRAME);
+    serial_conn_.read(read_buffer, 20);
 
         read_msg.start =  start;
-        read_msg.cmd1=  (read_buffer[3] << 8) | read_buffer[2]; 
-        read_msg.cmd2=  (read_buffer[5] << 8) | read_buffer[4]; 
-        read_msg.speedR_meas=  (read_buffer[7] << 8) | read_buffer[6]; 
-        read_msg.speedL_meas=  (read_buffer[9] << 8) | read_buffer[8]; 
-        read_msg.wheelR_cnt=  (read_buffer[11] << 8) | read_buffer[10]; 
-        read_msg.wheelL_cnt=  (read_buffer[13] << 8) | read_buffer[12];  
-        read_msg.batVoltage=  (read_buffer[15] << 8) | read_buffer[14]; 
-        read_msg.boardTemp=  (read_buffer[17] << 8) | read_buffer[16]; 
-        read_msg.cmdLed=  (read_buffer[19] << 8) | read_buffer[18]; 
-        read_msg.checksum=  (read_buffer[21] << 8) | read_buffer[20]; 
+        read_msg.cmd1=  (read_buffer[1] << 8) | read_buffer[0]; 
+        read_msg.cmd2=  (read_buffer[3] << 8) | read_buffer[2]; 
+        read_msg.speedR_meas=  (read_buffer[5] << 8) | read_buffer[4]; 
+        read_msg.speedL_meas=  (read_buffer[7] << 8) | read_buffer[6]; 
+        read_msg.wheelR_cnt=  (read_buffer[9] << 8) | read_buffer[8]; 
+        read_msg.wheelL_cnt=  (read_buffer[11] << 8) | read_buffer[10];  
+        read_msg.batVoltage=  (read_buffer[13] << 8) | read_buffer[12]; 
+        read_msg.boardTemp=  (read_buffer[15] << 8) | read_buffer[14]; 
+        read_msg.cmdLed=  (read_buffer[17] << 8) | read_buffer[16]; 
+        read_msg.checksum=  (read_buffer[19] << 8) | read_buffer[18]; 
+
 
         if (read_msg.checksum != (uint16_t)(
         read_msg.start ^
@@ -71,13 +60,13 @@ SerialFeedback HoverComms::readValues()
         read_msg.boardTemp ^
         read_msg.cmdLed))
         {
-            read_msg.start = 0
+            read_msg.start = 3;
             return read_msg; //error!
         }
-        encoder_update(read_msg.wheelR_cnt, read_msg.wheelL_cnt)
+        encoder_update(read_msg.wheelR_cnt, read_msg.wheelL_cnt);
         return read_msg; //susess
 
-    }
+    
 }
  
 
@@ -118,8 +107,11 @@ void HoverComms::setMotorValues(double joints [2])
 serial_conn_.write(bytes, sizeof(write_msg) );
 }
 
-void Hover::Comms::encoder_update (int16_t right, int16_t left) {
-
+void HoverComms::encoder_update (int16_t right, int16_t left) {
+    static int16_t last_wheelcountR = 0;
+    static int16_t last_wheelcountL = 0; 
+    static int16_t multR = 0;
+    static int16_t multL = 0;
     // Calculate wheel position in ticks, factoring in encoder wraps
     if (right < ENCODER_LOW_WRAP && last_wheelcountR > ENCODER_HIGH_WRAP)
         multR++;
