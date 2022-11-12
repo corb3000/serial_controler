@@ -1,7 +1,7 @@
 # generated from ament_cmake_export_libraries/cmake/template/ament_cmake_export_libraries.cmake.in
 
 set(_exported_libraries "")
-set(_exported_library_names "libserial")
+set(_exported_library_names "serial")
 
 # populate serial_controler_LIBRARIES
 if(NOT _exported_libraries STREQUAL "")

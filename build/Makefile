@@ -57,13 +57,33 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigshark/hover_driver/serial_controler
+CMAKE_SOURCE_DIR = /home/corb3/hover_controler/serial_controler
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigshark/hover_driver/serial_controler/build
+CMAKE_BINARY_DIR = /home/corb3/hover_controler/serial_controler/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	/usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/corb3/hover_controler/serial_controler/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
 
 # Special rule for the target test
 test:
@@ -142,9 +162,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigshark/hover_driver/serial_controler/build/CMakeFiles /home/bigshark/hover_driver/serial_controler/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/corb3/hover_controler/serial_controler/build/CMakeFiles /home/corb3/hover_controler/serial_controler/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigshark/hover_driver/serial_controler/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/corb3/hover_controler/serial_controler/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -172,6 +192,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named serial_controler
+
+# Build rule for target.
+serial_controler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial_controler
+.PHONY : serial_controler
+
+# fast build rule for target.
+serial_controler/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/build
+.PHONY : serial_controler/fast
+
+#=============================================================================
 # Target rules for targets named uninstall
 
 # Build rule for target.
@@ -196,19 +229,6 @@ serial_controler_uninstall: cmake_check_build_system
 serial_controler_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler_uninstall.dir/build.make CMakeFiles/serial_controler_uninstall.dir/build
 .PHONY : serial_controler_uninstall/fast
-
-#=============================================================================
-# Target rules for targets named serial_controler
-
-# Build rule for target.
-serial_controler: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial_controler
-.PHONY : serial_controler
-
-# fast build rule for target.
-serial_controler/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/build
-.PHONY : serial_controler/fast
 
 include/serial_controler/hover_comms.o: include/serial_controler/hover_comms.cpp.o
 .PHONY : include/serial_controler/hover_comms.o
@@ -269,6 +289,8 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... serial_controler_uninstall"

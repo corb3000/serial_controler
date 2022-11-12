@@ -36,7 +36,7 @@ endif()
 set(serial_controler_FOUND_AMENT_PACKAGE TRUE)
 
 # include all config extra files
-set(_extras "")
+set(_extras "ament_cmake_export_libraries-extras.cmake")
 foreach(_extra ${_extras})
   include("${serial_controler_DIR}/${_extra}")
 endforeach()

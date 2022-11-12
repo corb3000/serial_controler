@@ -8,18 +8,24 @@
 #include "protocol.h"
 #include "config.h"
 
+// using namespace LibSerial ;
+
 class HoverComms
 {
  
 public:
-
+ 
   void setup(const std::string &serial_device);
   SerialFeedback readValues();
   void setMotorValues(double joints [2]);
   std::string sendMsg(const std::string &msg_to_send, bool print_output = false);
+
+  LibSerial::SerialPort  serial_conn; //< Underlying serial connection
+ 
   SerialFeedback read_msg;
   SerialCommand write_msg;
-  LibSerial::SerialPort  serial_conn; //< Underlying serial connection
+ 
+
 
 private:
   

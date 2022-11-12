@@ -204,6 +204,10 @@ CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o: ../i
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/this_thread_sleep.h \
+  ../include/serial_controler/hover_comms.h \
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/libserial/SerialPort.h \
   /usr/include/libserial/SerialPortConstants.h \
   /usr/include/termios.h \
@@ -234,10 +238,6 @@ CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o: ../i
   /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
-  ../include/serial_controler/hover_comms.h \
-  /usr/include/c++/11/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   ../include/serial_controler/protocol.h \
   ../include/serial_controler/config.h
 
@@ -491,8 +491,6 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 ../include/serial_controler/protocol.h:
 
-/usr/include/string.h:
-
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
 /usr/include/c++/11/memory:
@@ -508,6 +506,8 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 /usr/include/x86_64-linux-gnu/bits/termios.h:
 
 /usr/include/termios.h:
+
+/usr/include/string.h:
 
 /usr/include/c++/11/bits/refwrap.h:
 
