@@ -11,8 +11,12 @@ using namespace std;
 int main()
 {
     // prints 
+    cout << "\n help ";
     double s;
-    cin >> s ;    
+    cin >> s ;  
+    cout << "\n help \n";
+    cout << "input" << s;  
+    cout << "\n help \n";
     int16_t loop = 0;
     while (true)
     {

@@ -28,21 +28,29 @@ void HoverComms::setup(const std::string &serial_device)
 
 SerialFeedback HoverComms::readValues()
 {
-    uint16_t start = 0;
-    char bite0= 0;
-    char bite1= 0;
+    u_int16_t start = 0;
+    char char0= 0;
+    char char1= 0;
+    u_int8_t byte1;
+    u_int8_t byte0;
     DataBuffer read_buffer;
 
     do{
-        serial_conn.ReadByte(bite0, 5);
-        if  (bite0 == (START_FRAME & 0xFF)) {
-          serial_conn.ReadByte(bite1, 1);  
+        serial_conn.ReadByte(char0, 500);
+        byte0 = char0;
+        
+        u_int8_t test = u_int8_t(START_FRAME & 0xFF);
+        if  (byte0 == 205) {
+          serial_conn.ReadByte(char1, 500); 
+          byte1 = char1; 
+          start = ((uint16_t)byte1 << 8) | byte0;
+          std::cout << "Byte 0 "<< unsigned(byte0) << "  Byte 1 " << unsigned(byte1) << "  Start " << start  << " \n ";
         }
-        start = bite1 | bite0;
-        }
+        
+        }     
     while (start != START_FRAME );
-
-        serial_conn.Read(read_buffer, 20, 5);
+        std::cout << "Byte 0 "<< unsigned(byte0) << "  Byte 1 " << unsigned(byte1) << "  Start " << start  << " sf " << START_FRAME << "\n";
+        serial_conn.Read(read_buffer, 20, 500);
 
         read_msg.start =  start;
         read_msg.cmd1=  (read_buffer[1] << 8) | read_buffer[0]; 

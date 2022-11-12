@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/corb3/hover_controler/serial_controler/include/serial_cont/hover_comms.cpp" "CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o" "gcc" "CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o.d"
-  "/home/corb3/hover_controler/serial_controler/include/serial_cont/main.cpp" "CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o" "gcc" "CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o.d"
+  "/home/bigshark/hover_driver/serial_controler/include/serial_cont/hover_comms.cpp" "CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o" "gcc" "CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o.d"
+  "/home/bigshark/hover_driver/serial_controler/include/serial_cont/main.cpp" "CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o" "gcc" "CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o.d"
   )
 
 # Targets to which this target links.
