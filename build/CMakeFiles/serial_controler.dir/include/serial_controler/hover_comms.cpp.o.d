@@ -161,9 +161,34 @@ CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o: \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/unique_ptr.h \
  /usr/include/c++/11/bits/this_thread_sleep.h \
+ /usr/include/libserial/SerialPort.h \
+ /usr/include/libserial/SerialPortConstants.h /usr/include/termios.h \
+ /usr/include/x86_64-linux-gnu/bits/termios.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+ /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+ /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
+ /usr/include/c++/11/bits/shared_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr_base.h \
+ /usr/include/c++/11/bits/allocated_ptr.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/ext/concurrence.h \
+ /usr/include/c++/11/bits/shared_ptr_atomic.h \
+ /usr/include/c++/11/bits/atomic_base.h \
+ /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/11/backward/auto_ptr.h \
+ /usr/include/c++/11/pstl/glue_memory_defs.h \
+ /usr/include/c++/11/pstl/execution_defs.h \
  /home/bigshark/hover_driver/serial_controler/include/serial_controler/hover_comms.h \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
- /tmp/usr/local/include/serial/serial.h \
- /tmp/usr/local/include/serial/v8stdint.h \
  /home/bigshark/hover_driver/serial_controler/include/serial_controler/protocol.h \
  /home/bigshark/hover_driver/serial_controler/include/serial_controler/config.h

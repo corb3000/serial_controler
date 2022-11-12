@@ -6,34 +6,44 @@ if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
 endif()
 
+
 set(CMAKE_BUILD_TYPE Debug)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra)
 endif()
 
-set(CMAKE_PREFIX_PATH "/tmp/usr/local/**" ;"/usr/local/serial/tmp/usr/local/**")
+# set(CMAKE_PREFIX_PATH "/usr/include/")
+
+
+set(IMPORTED_LOCATION"/usr/lib/x86_64-linux-gnu")
 
 find_package(ament_cmake REQUIRED)
-find_package(serial REQUIRED)
+# find_package(libserial REQUIRED)
 find_package(hardware_interface REQUIRED)
 find_package(controller_manager REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(pluginlib REQUIRED)
 
-# add_library(serial_controler SHARED include/serial_controler/hover_comms.cpp include/serial_controler/main.cpp )
+# ament_export_libraries(libserial)
+
+add_library(libserial SHARED IMPORTED)
 add_executable(serial_controler include/serial_controler/main.cpp include/serial_controler/hover_comms.cpp)
 
 target_include_directories(
   serial_controler
   PRIVATE
   include
+  libserial
+  PUBLIC
 )
+
 ament_target_dependencies(
   serial_controler
   hardware_interface
   controller_manager
-  serial
+  # libserial
+
   rclcpp
   pluginlib
 )

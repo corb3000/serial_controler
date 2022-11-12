@@ -3,18 +3,14 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}",
-                "${workspaceFolder}/include/serial_controler",
-                "/usr/local/serial/tmp/usr/local/**",
-                "/usr/local/serial/tmp/usr/local/include"
+                "${workspaceFolder}/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
             "cppStandard": "gnu++17",
             "intelliSenseMode": "linux-gcc-x64",
-            "configurationProvider": "ms-vscode.cmake-tools"
+            "configurationProvider": "ms-vscode.makefile-tools"
         }
     ],
     "version": 4

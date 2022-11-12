@@ -7,18 +7,20 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include <libserial/SerialPort.h>
 #include "hover_comms.h"
 #include "config.h"
 
+using namespace LibSerial;
 
 
-
-void HoverComms::setup(const std::string &serial_device, int32_t baud_rate, int32_t timeout_ms)
+void HoverComms::setup(const std::string &serial_device)
 {  
-    serial_conn_.setPort(serial_device);
-    serial_conn_.setBaudrate(baud_rate);
-    serial_conn_.setTimeout(0,timeout_ms,0,timeout_ms,0); 
-    serial_conn_.open();
+    serial_conn.Open(serial_device);
+    serial_conn.SetBaudRate(BaudRate::BAUD_115200);
+    // serial_conn.SetCharacterSize( CHAR_SIZE_8 ); 
+    // serial_conn.SetParity( PARITY_NONE );
+    
     // serial_conn_.(serial_device, baud_rate, serial::Timeout::simpleTimeout(timeout_ms));
 
 }
@@ -27,13 +29,20 @@ void HoverComms::setup(const std::string &serial_device, int32_t baud_rate, int3
 SerialFeedback HoverComms::readValues()
 {
     uint16_t start = 0;
+    char bite0= 0;
+    char bite1= 0;
+    DataBuffer read_buffer;
+
     do{
-        serial_conn_.flush();
-        serial_conn_.read(read_buffer, 2);
-        start = (read_buffer[1] << 8) | read_buffer[0];  
-    }
-    while (start != START_FRAME);
-    serial_conn_.read(read_buffer, 20);
+        serial_conn.ReadByte(bite0, 5);
+        if  (bite0 == (START_FRAME & 0xFF)) {
+          serial_conn.ReadByte(bite1, 1);  
+        }
+        start = bite1 | bite0;
+        }
+    while (start != START_FRAME );
+
+        serial_conn.Read(read_buffer, 20, 5);
 
         read_msg.start =  start;
         read_msg.cmd1=  (read_buffer[1] << 8) | read_buffer[0]; 
@@ -60,8 +69,7 @@ SerialFeedback HoverComms::readValues()
         read_msg.boardTemp ^
         read_msg.cmdLed))
         {
-            read_msg.start = 3;
-            return read_msg; //error!
+                return read_msg; //error!
         }
         encoder_update(read_msg.wheelR_cnt, read_msg.wheelL_cnt);
         return read_msg; //susess
@@ -93,18 +101,18 @@ void HoverComms::setMotorValues(double joints [2])
 
     // 16 bit system  
    
-    uint8_t bytes [sizeof(write_msg) * 2] = 
+    DataBuffer bytes  = 
         {
-        (write_msg.start >> 0) & 0xFF,  
-        (write_msg.start >> 8) & 0xFF,
-        (write_msg.steer >> 0) & 0xFF,  
-        (write_msg.steer >> 8) & 0xFF,
-        (write_msg.speed >> 0) & 0xFF,  
-        (write_msg.speed >> 8) & 0xFF,
-        (write_msg.checksum >> 0) & 0xFF,  
-        (write_msg.checksum >> 8) & 0xFF,
+        u_int8_t((write_msg.start >> 0) & 0xFF),  
+        u_int8_t((write_msg.start >> 8) & 0xFF),
+        u_int8_t((write_msg.steer >> 0) & 0xFF),  
+        u_int8_t((write_msg.steer >> 8) & 0xFF),
+        u_int8_t((write_msg.speed >> 0) & 0xFF),  
+        u_int8_t((write_msg.speed >> 8) & 0xFF),
+        u_int8_t((write_msg.checksum >> 0) & 0xFF),  
+        u_int8_t((write_msg.checksum >> 8) & 0xFF),
         };
-serial_conn_.write(bytes, sizeof(write_msg) );
+serial_conn.Write(bytes);
 }
 
 void HoverComms::encoder_update (int16_t right, int16_t left) {

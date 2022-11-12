@@ -19,7 +19,7 @@ int main()
 
     HoverComms hover_comms;
     
-    hover_comms.setup("/dev/ttyUSB0", 115200, 15);
+    hover_comms.setup("/dev/ttyUSB0");
     double jnt[2] = {s,s};
     hover_comms.setMotorValues(jnt);    /* code */
     SerialFeedback read_msg = hover_comms.readValues();

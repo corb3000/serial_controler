@@ -204,12 +204,40 @@ CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o: ../i
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/libserial/SerialPort.h \
+  /usr/include/libserial/SerialPortConstants.h \
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/align.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/backward/auto_ptr.h \
+  /usr/include/c++/11/pstl/glue_memory_defs.h \
+  /usr/include/c++/11/pstl/execution_defs.h \
   ../include/serial_controler/hover_comms.h \
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /tmp/usr/local/include/serial/serial.h \
-  /tmp/usr/local/include/serial/v8stdint.h \
   ../include/serial_controler/protocol.h \
   ../include/serial_controler/config.h
 
@@ -397,17 +425,52 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /tmp/usr/local/include/serial/serial.h \
+  /usr/include/libserial/SerialPort.h \
+  /usr/include/libserial/SerialPortConstants.h \
   /usr/include/c++/11/limits \
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
   /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
-  /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc \
-  /tmp/usr/local/include/serial/v8stdint.h \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/align.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/backward/auto_ptr.h \
+  /usr/include/c++/11/pstl/glue_memory_defs.h \
+  /usr/include/c++/11/pstl/execution_defs.h \
   ../include/serial_controler/protocol.h \
+  ../include/serial_controler/config.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -428,9 +491,23 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 ../include/serial_controler/protocol.h:
 
-/tmp/usr/local/include/serial/serial.h:
-
 /usr/include/string.h:
+
+/usr/include/c++/11/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/11/memory:
+
+/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-misc.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios.h:
+
+/usr/include/termios.h:
 
 /usr/include/c++/11/bits/refwrap.h:
 
@@ -441,6 +518,8 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 /usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/c++/11/bits/std_thread.h:
+
+/usr/include/c++/11/bits/shared_ptr_atomic.h:
 
 /usr/include/c++/11/bits/parse_numbers.h:
 
@@ -454,13 +533,19 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
+/usr/include/c++/11/backward/auto_ptr.h:
+
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
+/usr/include/c++/11/bits/align.h:
+
 /usr/include/c++/11/vector:
 
 /usr/include/c++/11/bits/istream.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h:
 
 /usr/include/c++/11/bits/unique_ptr.h:
 
@@ -474,6 +559,8 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
+
 /usr/include/c++/11/cwctype:
 
 /usr/include/c++/11/bits/locale_facets.h:
@@ -481,6 +568,8 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 /usr/include/c++/11/bits/basic_ios.h:
 
 ../include/serial_controler/config.h:
+
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/11/bits/streambuf.tcc:
 
@@ -499,6 +588,8 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 /usr/include/c++/11/bits/charconv.h:
 
 ../include/serial_controler/main.cpp:
+
+/usr/include/libserial/SerialPort.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
@@ -520,6 +611,8 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 /usr/include/stdio.h:
 
+/usr/include/libserial/SerialPortConstants.h:
+
 /usr/include/c++/11/chrono:
 
 /usr/include/c++/11/cstdio:
@@ -532,7 +625,11 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
+/usr/include/c++/11/bits/shared_ptr.h:
+
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/c++/11/ext/aligned_buffer.h:
 
 /usr/include/endian.h:
 
@@ -557,8 +654,6 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/c++/11/bits/functexcept.h:
-
-/tmp/usr/local/include/serial/v8stdint.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
@@ -594,11 +689,15 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 /usr/include/c++/11/bits/range_access.h:
 
+/usr/include/c++/11/bit:
+
 /usr/include/c++/11/cstdlib:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/c++/11/bits/stl_tempbuf.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
@@ -618,6 +717,8 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
+/usr/include/c++/11/pstl/execution_defs.h:
+
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/asm-generic/errno-base.h:
@@ -630,7 +731,13 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 /usr/include/features.h:
 
+/usr/include/c++/11/bits/atomic_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
+
 /usr/include/c++/11/ext/numeric_traits.h:
+
+/usr/include/c++/11/pstl/glue_memory_defs.h:
 
 /usr/include/c++/11/ext/type_traits.h:
 
@@ -700,6 +807,8 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 /usr/include/c++/11/bits/stringfwd.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios-struct.h:
+
 /usr/include/features-time64.h:
 
 /usr/include/linux/errno.h:
@@ -762,6 +871,8 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/c++/11/bits/move.h:
@@ -769,6 +880,8 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-baud.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
@@ -794,6 +907,8 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 /usr/include/c++/11/bits/ios_base.h:
 
+/usr/include/c++/11/ext/concurrence.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
 /usr/include/c++/11/bits/cpp_type_traits.h:
@@ -814,11 +929,15 @@ CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
+/usr/include/c++/11/bits/allocated_ptr.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/11/ext/new_allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/c++/11/bits/shared_ptr_base.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 

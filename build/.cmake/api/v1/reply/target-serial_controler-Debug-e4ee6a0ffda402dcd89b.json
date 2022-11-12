@@ -29,13 +29,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 25,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 32,
+				"line" : 41,
 				"parent" : 0
 			},
 			{
@@ -53,13 +53,13 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 12,
+				"line" : 13,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 27,
+				"line" : 33,
 				"parent" : 0
 			},
 			{
@@ -111,16 +111,16 @@
 					"path" : "/home/bigshark/hover_driver/serial_controler/include"
 				},
 				{
+					"backtrace" : 6,
+					"path" : "/home/bigshark/hover_driver/serial_controler/libserial"
+				},
+				{
 					"backtrace" : 7,
 					"path" : "/opt/ros/humble/include"
 				},
 				{
 					"backtrace" : 7,
 					"path" : "/opt/ros/humble/include/rclcpp_lifecycle"
-				},
-				{
-					"backtrace" : 7,
-					"path" : "/tmp/usr/local/include"
 				},
 				{
 					"backtrace" : 8,
@@ -338,7 +338,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/opt/ros/humble/lib:/tmp/usr/local/lib",
+				"fragment" : "-Wl,-rpath,/opt/ros/humble/lib",
 				"role" : "libraries"
 			},
 			{
@@ -1114,21 +1114,6 @@
 			{
 				"backtrace" : 3,
 				"fragment" : "/opt/ros/humble/lib/libtracetools.so",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "/tmp/usr/local/lib/libserial.so",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/librt.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libpthread.a",
 				"role" : "libraries"
 			},
 			{

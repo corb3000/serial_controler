@@ -793,8 +793,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/humble/share/unique_identifier_msgs/cmake/unique_identifier_msgs__rosidl_typesupport_introspection_cExport.cmake"
   "/opt/ros/humble/share/unique_identifier_msgs/cmake/unique_identifier_msgs__rosidl_typesupport_introspection_cppExport-none.cmake"
   "/opt/ros/humble/share/unique_identifier_msgs/cmake/unique_identifier_msgs__rosidl_typesupport_introspection_cppExport.cmake"
-  "/tmp/usr/local/share/serial/cmake/serialConfig-version.cmake"
-  "/tmp/usr/local/share/serial/cmake/serialConfig.cmake"
   "/usr/lib/x86_64-linux-gnu/console_bridge/cmake/console_bridge-config-version.cmake"
   "/usr/lib/x86_64-linux-gnu/console_bridge/cmake/console_bridge-config.cmake"
   "/usr/lib/x86_64-linux-gnu/console_bridge/cmake/console_bridge-targets-none.cmake"

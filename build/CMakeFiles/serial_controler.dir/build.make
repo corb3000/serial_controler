@@ -262,9 +262,6 @@ serial_controler: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_int
 serial_controler: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
 serial_controler: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_py.so
 serial_controler: /opt/ros/humble/lib/libtracetools.so
-serial_controler: /tmp/usr/local/lib/libserial.so
-serial_controler: /usr/lib/x86_64-linux-gnu/librt.a
-serial_controler: /usr/lib/x86_64-linux-gnu/libpthread.a
 serial_controler: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so
 serial_controler: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
 serial_controler: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c.so

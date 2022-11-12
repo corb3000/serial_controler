@@ -584,14 +584,6 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/tmp/usr/local/share/serial/cmake/serialConfig-version.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/tmp/usr/local/share/serial/cmake/serialConfig.cmake"
-		},
-		{
-			"isExternal" : true,
 			"path" : "/opt/ros/humble/share/hardware_interface/cmake/hardware_interfaceConfig-version.cmake"
 		},
 		{
