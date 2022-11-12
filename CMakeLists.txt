@@ -20,7 +20,7 @@ endif()
 # set(libserial_INCLUDE_DIRS "/usr/include/libserial")
 # set(libserial_LIBRARIES "/usr/lib/x86_64-linux-gnu/libserial")
 # add_library(serial SHARED IMPORTED)
-add_executable(serial_controler include/serial_controler/main.cpp include/serial_controler/hover_comms.cpp)
+add_executable(serial_controler include/serial_cont/main.cpp include/serial_cont/hover_comms.cpp)
 
 find_package(ament_cmake REQUIRED)
 # find_package(serial REQUIRED)

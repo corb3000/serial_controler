@@ -1,8 +1,6 @@
 /home/corb3/hover_controler/serial_controler/build/CMakeFiles/serial_controler.dir
 /home/corb3/hover_controler/serial_controler/build/CMakeFiles/uninstall.dir
 /home/corb3/hover_controler/serial_controler/build/CMakeFiles/serial_controler_uninstall.dir
-/home/corb3/hover_controler/serial_controler/build/CMakeFiles/package.dir
-/home/corb3/hover_controler/serial_controler/build/CMakeFiles/package_source.dir
 /home/corb3/hover_controler/serial_controler/build/CMakeFiles/test.dir
 /home/corb3/hover_controler/serial_controler/build/CMakeFiles/edit_cache.dir
 /home/corb3/hover_controler/serial_controler/build/CMakeFiles/rebuild_cache.dir

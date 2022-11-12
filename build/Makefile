@@ -65,26 +65,6 @@ CMAKE_BINARY_DIR = /home/corb3/hover_controler/serial_controler/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	/usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-.PHONY : package/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/corb3/hover_controler/serial_controler/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-.PHONY : package_source/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -230,53 +210,53 @@ serial_controler_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler_uninstall.dir/build.make CMakeFiles/serial_controler_uninstall.dir/build
 .PHONY : serial_controler_uninstall/fast
 
-include/serial_controler/hover_comms.o: include/serial_controler/hover_comms.cpp.o
-.PHONY : include/serial_controler/hover_comms.o
+include/serial_cont/hover_comms.o: include/serial_cont/hover_comms.cpp.o
+.PHONY : include/serial_cont/hover_comms.o
 
 # target to build an object file
-include/serial_controler/hover_comms.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o
-.PHONY : include/serial_controler/hover_comms.cpp.o
+include/serial_cont/hover_comms.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o
+.PHONY : include/serial_cont/hover_comms.cpp.o
 
-include/serial_controler/hover_comms.i: include/serial_controler/hover_comms.cpp.i
-.PHONY : include/serial_controler/hover_comms.i
+include/serial_cont/hover_comms.i: include/serial_cont/hover_comms.cpp.i
+.PHONY : include/serial_cont/hover_comms.i
 
 # target to preprocess a source file
-include/serial_controler/hover_comms.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.i
-.PHONY : include/serial_controler/hover_comms.cpp.i
+include/serial_cont/hover_comms.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.i
+.PHONY : include/serial_cont/hover_comms.cpp.i
 
-include/serial_controler/hover_comms.s: include/serial_controler/hover_comms.cpp.s
-.PHONY : include/serial_controler/hover_comms.s
+include/serial_cont/hover_comms.s: include/serial_cont/hover_comms.cpp.s
+.PHONY : include/serial_cont/hover_comms.s
 
 # target to generate assembly for a file
-include/serial_controler/hover_comms.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.s
-.PHONY : include/serial_controler/hover_comms.cpp.s
+include/serial_cont/hover_comms.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.s
+.PHONY : include/serial_cont/hover_comms.cpp.s
 
-include/serial_controler/main.o: include/serial_controler/main.cpp.o
-.PHONY : include/serial_controler/main.o
+include/serial_cont/main.o: include/serial_cont/main.cpp.o
+.PHONY : include/serial_cont/main.o
 
 # target to build an object file
-include/serial_controler/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o
-.PHONY : include/serial_controler/main.cpp.o
+include/serial_cont/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o
+.PHONY : include/serial_cont/main.cpp.o
 
-include/serial_controler/main.i: include/serial_controler/main.cpp.i
-.PHONY : include/serial_controler/main.i
+include/serial_cont/main.i: include/serial_cont/main.cpp.i
+.PHONY : include/serial_cont/main.i
 
 # target to preprocess a source file
-include/serial_controler/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.i
-.PHONY : include/serial_controler/main.cpp.i
+include/serial_cont/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.i
+.PHONY : include/serial_cont/main.cpp.i
 
-include/serial_controler/main.s: include/serial_controler/main.cpp.s
-.PHONY : include/serial_controler/main.s
+include/serial_cont/main.s: include/serial_cont/main.cpp.s
+.PHONY : include/serial_cont/main.s
 
 # target to generate assembly for a file
-include/serial_controler/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.s
-.PHONY : include/serial_controler/main.cpp.s
+include/serial_cont/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_controler.dir/build.make CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.s
+.PHONY : include/serial_cont/main.cpp.s
 
 # Help Target
 help:
@@ -289,19 +269,17 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... package"
-	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... serial_controler_uninstall"
 	@echo "... uninstall"
 	@echo "... serial_controler"
-	@echo "... include/serial_controler/hover_comms.o"
-	@echo "... include/serial_controler/hover_comms.i"
-	@echo "... include/serial_controler/hover_comms.s"
-	@echo "... include/serial_controler/main.o"
-	@echo "... include/serial_controler/main.i"
-	@echo "... include/serial_controler/main.s"
+	@echo "... include/serial_cont/hover_comms.o"
+	@echo "... include/serial_cont/hover_comms.i"
+	@echo "... include/serial_cont/hover_comms.s"
+	@echo "... include/serial_cont/main.o"
+	@echo "... include/serial_cont/main.i"
+	@echo "... include/serial_cont/main.s"
 .PHONY : help
 
 

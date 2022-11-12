@@ -69,44 +69,44 @@ include CMakeFiles/serial_controler.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/serial_controler.dir/flags.make
 
-CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: CMakeFiles/serial_controler.dir/flags.make
-CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: ../include/serial_controler/main.cpp
-CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o: CMakeFiles/serial_controler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/corb3/hover_controler/serial_controler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o -MF CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o.d -o CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o -c /home/corb3/hover_controler/serial_controler/include/serial_controler/main.cpp
+CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o: CMakeFiles/serial_controler.dir/flags.make
+CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o: ../include/serial_cont/main.cpp
+CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o: CMakeFiles/serial_controler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/corb3/hover_controler/serial_controler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o -MF CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o.d -o CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o -c /home/corb3/hover_controler/serial_controler/include/serial_cont/main.cpp
 
-CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/corb3/hover_controler/serial_controler/include/serial_controler/main.cpp > CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.i
+CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/corb3/hover_controler/serial_controler/include/serial_cont/main.cpp > CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.i
 
-CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/corb3/hover_controler/serial_controler/include/serial_controler/main.cpp -o CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.s
+CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/corb3/hover_controler/serial_controler/include/serial_cont/main.cpp -o CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.s
 
-CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o: CMakeFiles/serial_controler.dir/flags.make
-CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o: ../include/serial_controler/hover_comms.cpp
-CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o: CMakeFiles/serial_controler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/corb3/hover_controler/serial_controler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o -MF CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o.d -o CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o -c /home/corb3/hover_controler/serial_controler/include/serial_controler/hover_comms.cpp
+CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o: CMakeFiles/serial_controler.dir/flags.make
+CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o: ../include/serial_cont/hover_comms.cpp
+CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o: CMakeFiles/serial_controler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/corb3/hover_controler/serial_controler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o -MF CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o.d -o CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o -c /home/corb3/hover_controler/serial_controler/include/serial_cont/hover_comms.cpp
 
-CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/corb3/hover_controler/serial_controler/include/serial_controler/hover_comms.cpp > CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.i
+CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/corb3/hover_controler/serial_controler/include/serial_cont/hover_comms.cpp > CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.i
 
-CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/corb3/hover_controler/serial_controler/include/serial_controler/hover_comms.cpp -o CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.s
+CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/corb3/hover_controler/serial_controler/include/serial_cont/hover_comms.cpp -o CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.s
 
 # Object files for target serial_controler
 serial_controler_OBJECTS = \
-"CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o" \
-"CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o"
+"CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o" \
+"CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o"
 
 # External object files for target serial_controler
 serial_controler_EXTERNAL_OBJECTS =
 
-serial_controler: CMakeFiles/serial_controler.dir/include/serial_controler/main.cpp.o
-serial_controler: CMakeFiles/serial_controler.dir/include/serial_controler/hover_comms.cpp.o
+serial_controler: CMakeFiles/serial_controler.dir/include/serial_cont/main.cpp.o
+serial_controler: CMakeFiles/serial_controler.dir/include/serial_cont/hover_comms.cpp.o
 serial_controler: CMakeFiles/serial_controler.dir/build.make
 serial_controler: /opt/ros/humble/lib/libcontroller_manager.so
 serial_controler: /opt/ros/humble/lib/libament_index_cpp.so

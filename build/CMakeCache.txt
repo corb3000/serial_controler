@@ -169,21 +169,6 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=serial_controler
 
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.1.0
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=1
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=0
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_TWEAK:STATIC=
-
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 
@@ -246,70 +231,6 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Path to the coverage program that CTest uses for performing coverage
-// inspection
-COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
-
-//Extra command line flags to pass to the coverage tool
-COVERAGE_EXTRA_FLAGS:STRING=-l
-
-//Enable to build Debian packages
-CPACK_BINARY_DEB:BOOL=OFF
-
-//Enable to build FreeBSD packages
-CPACK_BINARY_FREEBSD:BOOL=OFF
-
-//Enable to build IFW packages
-CPACK_BINARY_IFW:BOOL=OFF
-
-//Enable to build NSIS packages
-CPACK_BINARY_NSIS:BOOL=OFF
-
-//Enable to build RPM packages
-CPACK_BINARY_RPM:BOOL=OFF
-
-//Enable to build STGZ packages
-CPACK_BINARY_STGZ:BOOL=ON
-
-//Enable to build TBZ2 packages
-CPACK_BINARY_TBZ2:BOOL=OFF
-
-//Enable to build TGZ packages
-CPACK_BINARY_TGZ:BOOL=ON
-
-//Enable to build TXZ packages
-CPACK_BINARY_TXZ:BOOL=OFF
-
-//Enable to build TZ packages
-CPACK_BINARY_TZ:BOOL=ON
-
-//Enable to build RPM source packages
-CPACK_SOURCE_RPM:BOOL=OFF
-
-//Enable to build TBZ2 source packages
-CPACK_SOURCE_TBZ2:BOOL=ON
-
-//Enable to build TGZ source packages
-CPACK_SOURCE_TGZ:BOOL=ON
-
-//Enable to build TXZ source packages
-CPACK_SOURCE_TXZ:BOOL=ON
-
-//Enable to build TZ source packages
-CPACK_SOURCE_TZ:BOOL=ON
-
-//Enable to build ZIP source packages
-CPACK_SOURCE_ZIP:BOOL=OFF
-
-//How many times to retry timed-out CTest submissions.
-CTEST_SUBMIT_RETRY_COUNT:STRING=3
-
-//How long to wait between timed-out CTest submissions.
-CTEST_SUBMIT_RETRY_DELAY:STRING=5
-
-//Maximum time allowed before CTest will kill the test.
-DART_TESTING_TIMEOUT:STRING=1500
-
 //Path to a library.
 FastCDR_LIBRARY_DEBUG:FILEPATH=FastCDR_LIBRARY_DEBUG-NOTFOUND
 
@@ -324,18 +245,6 @@ FastRTPS_LIBRARY_DEBUG:FILEPATH=FastRTPS_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
 FastRTPS_LIBRARY_RELEASE:FILEPATH=/opt/ros/humble/lib/libfastrtps.so
-
-//Path to a program.
-GITCOMMAND:FILEPATH=/usr/bin/git
-
-//Command to build the project
-MAKECOMMAND:STRING=/usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
-
-//Path to the memory checking command, used for memory error detection.
-MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
-
-//File that contains suppressions for the memory checker
-MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
@@ -460,12 +369,6 @@ geometry_msgs_DIR:PATH=/opt/ros/humble/share/geometry_msgs/cmake
 //The directory containing a CMake configuration file for hardware_interface.
 hardware_interface_DIR:PATH=/opt/ros/humble/share/hardware_interface/cmake
 
-//Path to a library.
-libserial:FILEPATH=libserial-NOTFOUND
-
-//The directory containing a CMake configuration file for libserial.
-libserial_DIR:PATH=libserial_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for libstatistics_collector.
 libstatistics_collector_DIR:PATH=/opt/ros/humble/share/libstatistics_collector/cmake
 
@@ -580,14 +483,14 @@ rosidl_typesupport_introspection_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_types
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/humble/share/sensor_msgs/cmake
 
-//The directory containing a CMake configuration file for serial.
-serial_DIR:PATH=serial_DIR-NOTFOUND
-
 //Value Computed by CMake
 serial_controler_BINARY_DIR:STATIC=/home/corb3/hover_controler/serial_controler/build
 
 //Value Computed by CMake
 serial_controler_IS_TOP_LEVEL:STATIC=ON
+
+//Dependencies for the target
+serial_controler_LIB_DEPENDS:STATIC=general;serial;general;rclcpp::rclcpp;general;/opt/ros/humble/lib/libcontroller_manager.so;general;/opt/ros/humble/lib/libament_index_cpp.so;general;/opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so;general;/opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so;general;/opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so;general;/opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so;general;/opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so;general;/opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so;general;/opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so;general;/opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so;general;/opt/ros/humble/lib/libcontroller_interface.so;general;/opt/ros/humble/lib/libcontroller_manager_msgs__rosidl_generator_c.so;general;/opt/ros/humble/lib/libcontroller_manager_msgs__rosidl_typesupport_fastrtps_c.so;general;/opt/ros/humble/lib/libcontroller_manager_msgs__rosidl_typesupport_fastrtps_cpp.so;general;/opt/ros/humble/lib/libcontroller_manager_msgs__rosidl_typesupport_introspection_c.so;general;/opt/ros/humble/lib/libcontroller_manager_msgs__rosidl_typesupport_c.so;general;/opt/ros/humble/lib/libcontroller_manager_msgs__rosidl_typesupport_introspection_cpp.so;general;/opt/ros/humble/lib/libcontroller_manager_msgs__rosidl_typesupport_cpp.so;general;/opt/ros/humble/lib/libcontroller_manager_msgs__rosidl_generator_py.so;general;controller_manager_msgs::controller_manager_msgs__rosidl_generator_c;general;controller_manager_msgs::controller_manager_msgs__rosidl_typesupport_c;general;/opt/ros/humble/lib/libfake_components.so;general;/opt/ros/humble/lib/libmock_components.so;general;/opt/ros/humble/lib/libhardware_interface.so;general;/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so;general;/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so;general;/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so;general;/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so;general;/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so;general;/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so;general;/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so;general;/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so;general;/opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so;general;/opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so;general;/opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so;general;/opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so;general;/opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so;general;/opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so;general;/opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so;general;/opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so;general;/opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so;general;/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so;general;/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so;general;/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so;general;/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so;general;/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so;general;/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so;general;/opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so;general;/opt/ros/humble/lib/libtrajectory_msgs__rosidl_generator_c.so;general;/opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_fastrtps_c.so;general;/opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_fastrtps_cpp.so;general;/opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_introspection_c.so;general;/opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_c.so;general;/opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_introspection_cpp.so;general;/opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_cpp.so;general;/opt/ros/humble/lib/libtrajectory_msgs__rosidl_generator_py.so;general;/opt/ros/humble/lib/libaction_msgs__rosidl_generator_c.so;general;/opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_fastrtps_c.so;general;/opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_fastrtps_cpp.so;general;/opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_introspection_c.so;general;/opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_c.so;general;/opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_introspection_cpp.so;general;/opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_cpp.so;general;/opt/ros/humble/lib/libaction_msgs__rosidl_generator_py.so;general;/opt/ros/humble/lib/libcontrol_msgs__rosidl_generator_c.so;general;action_msgs::action_msgs__rosidl_generator_c;general;unique_identifier_msgs::unique_identifier_msgs__rosidl_generator_c;general;geometry_msgs::geometry_msgs__rosidl_generator_c;general;std_msgs::std_msgs__rosidl_generator_c;general;sensor_msgs::sensor_msgs__rosidl_generator_c;general;trajectory_msgs::trajectory_msgs__rosidl_generator_c;general;/opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_fastrtps_c.so;general;action_msgs::action_msgs__rosidl_typesupport_fastrtps_c;general;unique_identifier_msgs::unique_identifier_msgs__rosidl_typesupport_fastrtps_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_fastrtps_c;general;std_msgs::std_msgs__rosidl_typesupport_fastrtps_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_c;general;trajectory_msgs::trajectory_msgs__rosidl_typesupport_fastrtps_c;general;/opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_fastrtps_cpp.so;general;action_msgs::action_msgs__rosidl_typesupport_fastrtps_cpp;general;unique_identifier_msgs::unique_identifier_msgs__rosidl_typesupport_fastrtps_cpp;general;geometry_msgs::geometry_msgs__rosidl_typesupport_fastrtps_cpp;general;std_msgs::std_msgs__rosidl_typesupport_fastrtps_cpp;general;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_cpp;general;trajectory_msgs::trajectory_msgs__rosidl_typesupport_fastrtps_cpp;general;/opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_introspection_c.so;general;action_msgs::action_msgs__rosidl_typesupport_introspection_c;general;unique_identifier_msgs::unique_identifier_msgs__rosidl_typesupport_introspection_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_c;general;std_msgs::std_msgs__rosidl_typesupport_introspection_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_c;general;trajectory_msgs::trajectory_msgs__rosidl_typesupport_introspection_c;general;/opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_c.so;general;action_msgs::action_msgs__rosidl_typesupport_c;general;unique_identifier_msgs::unique_identifier_msgs__rosidl_typesupport_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_c;general;std_msgs::std_msgs__rosidl_typesupport_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_c;general;trajectory_msgs::trajectory_msgs__rosidl_typesupport_c;general;/opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_introspection_cpp.so;general;action_msgs::action_msgs__rosidl_typesupport_introspection_cpp;general;unique_identifier_msgs::unique_identifier_msgs__rosidl_typesupport_introspection_cpp;general;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_cpp;general;std_msgs::std_msgs__rosidl_typesupport_introspection_cpp;general;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_cpp;general;trajectory_msgs::trajectory_msgs__rosidl_typesupport_introspection_cpp;general;/opt/ros/humble/lib/libcontrol_msgs__rosidl_typesupport_cpp.so;general;action_msgs::action_msgs__rosidl_typesupport_cpp;general;unique_identifier_msgs::unique_identifier_msgs__rosidl_typesupport_cpp;general;geometry_msgs::geometry_msgs__rosidl_typesupport_cpp;general;std_msgs::std_msgs__rosidl_typesupport_cpp;general;sensor_msgs::sensor_msgs__rosidl_typesupport_cpp;general;trajectory_msgs::trajectory_msgs__rosidl_typesupport_cpp;general;/opt/ros/humble/lib/libcontrol_msgs__rosidl_generator_py.so;general;control_msgs::control_msgs__rosidl_generator_c;general;control_msgs::control_msgs__rosidl_typesupport_c;general;action_msgs::action_msgs__rosidl_generator_py;general;unique_identifier_msgs::unique_identifier_msgs__rosidl_generator_py;general;geometry_msgs::geometry_msgs__rosidl_generator_py;general;std_msgs::std_msgs__rosidl_generator_py;general;sensor_msgs::sensor_msgs__rosidl_generator_py;general;trajectory_msgs::trajectory_msgs__rosidl_generator_py;general;/opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so;general;/opt/ros/humble/lib/librmw.so;general;/opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so;general;rosidl_typesupport_c::rosidl_typesupport_c;general;/opt/ros/humble/lib/librosidl_typesupport_c.so;general;/opt/ros/humble/lib/librosidl_typesupport_cpp.so;general;/opt/ros/humble/lib/librosidl_typesupport_introspection_c.so;general;/opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.1.0;general;/opt/ros/humble/lib/libclass_loader.so;general;console_bridge::console_bridge;general;/opt/ros/humble/lib/librcl.so;general;rcl_logging_interface::rcl_logging_interface;general;rmw_implementation::rmw_implementation;general;rcl_logging_spdlog::rcl_logging_spdlog;general;/opt/ros/humble/lib/librosidl_runtime_c.so;general;/opt/ros/humble/lib/libtracetools.so;general;/opt/ros/humble/lib/librcl_lifecycle.so;general;/opt/ros/humble/lib/liblifecycle_msgs__rosidl_generator_c.so;general;/opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_fastrtps_c.so;general;rosidl_typesupport_fastrtps_c::rosidl_typesupport_fastrtps_c;general;/opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_introspection_c.so;general;rosidl_typesupport_introspection_c::rosidl_typesupport_introspection_c;general;/opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_c.so;general;/opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_fastrtps_cpp.so;general;fastcdr;general;rmw::rmw;general;rosidl_typesupport_fastrtps_cpp::rosidl_typesupport_fastrtps_cpp;general;/opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_introspection_cpp.so;general;rosidl_runtime_c::rosidl_runtime_c;general;rosidl_typesupport_introspection_cpp::rosidl_typesupport_introspection_cpp;general;/opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_cpp.so;general;/opt/ros/humble/lib/liblifecycle_msgs__rosidl_generator_py.so;general;/usr/lib/x86_64-linux-gnu/libpython3.10.so;general;/opt/ros/humble/lib/librclcpp_lifecycle.so;general;rclcpp::rclcpp;general;rcl_lifecycle::rcl_lifecycle;general;lifecycle_msgs::lifecycle_msgs__rosidl_generator_c;general;lifecycle_msgs::lifecycle_msgs__rosidl_typesupport_fastrtps_c;general;lifecycle_msgs::lifecycle_msgs__rosidl_typesupport_introspection_c;general;lifecycle_msgs::lifecycle_msgs__rosidl_typesupport_c;general;lifecycle_msgs::lifecycle_msgs__rosidl_typesupport_fastrtps_cpp;general;lifecycle_msgs::lifecycle_msgs__rosidl_typesupport_introspection_cpp;general;lifecycle_msgs::lifecycle_msgs__rosidl_typesupport_cpp;general;lifecycle_msgs::lifecycle_msgs__rosidl_generator_py;general;/opt/ros/humble/lib/librcpputils.so;general;/opt/ros/humble/lib/librcutils.so;general;dl;general;class_loader::class_loader;general;tinyxml2::tinyxml2;general;/opt/ros/humble/lib/librclcpp.so;general;ament_index_cpp::ament_index_cpp;general;libstatistics_collector::libstatistics_collector;general;rcl::rcl;general;rcl_interfaces::rcl_interfaces__rosidl_generator_c;general;rcl_interfaces::rcl_interfaces__rosidl_typesupport_fastrtps_c;general;rcl_interfaces::rcl_interfaces__rosidl_typesupport_introspection_c;general;rcl_interfaces::rcl_interfaces__rosidl_typesupport_c;general;rcl_interfaces::rcl_interfaces__rosidl_typesupport_fastrtps_cpp;general;rcl_interfaces::rcl_interfaces__rosidl_typesupport_introspection_cpp;general;rcl_interfaces::rcl_interfaces__rosidl_typesupport_cpp;general;rcl_interfaces::rcl_interfaces__rosidl_generator_py;general;rcl_yaml_param_parser::rcl_yaml_param_parser;general;rcpputils::rcpputils;general;rcutils::rcutils;general;builtin_interfaces::builtin_interfaces__rosidl_generator_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_fastrtps_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_fastrtps_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_generator_py;general;rosgraph_msgs::rosgraph_msgs__rosidl_generator_c;general;rosgraph_msgs::rosgraph_msgs__rosidl_typesupport_fastrtps_c;general;rosgraph_msgs::rosgraph_msgs__rosidl_typesupport_fastrtps_cpp;general;rosgraph_msgs::rosgraph_msgs__rosidl_typesupport_introspection_c;general;rosgraph_msgs::rosgraph_msgs__rosidl_typesupport_c;general;rosgraph_msgs::rosgraph_msgs__rosidl_typesupport_introspection_cpp;general;rosgraph_msgs::rosgraph_msgs__rosidl_typesupport_cpp;general;rosgraph_msgs::rosgraph_msgs__rosidl_generator_py;general;rosidl_typesupport_cpp::rosidl_typesupport_cpp;general;statistics_msgs::statistics_msgs__rosidl_generator_c;general;statistics_msgs::statistics_msgs__rosidl_typesupport_fastrtps_c;general;statistics_msgs::statistics_msgs__rosidl_typesupport_fastrtps_cpp;general;statistics_msgs::statistics_msgs__rosidl_typesupport_introspection_c;general;statistics_msgs::statistics_msgs__rosidl_typesupport_c;general;statistics_msgs::statistics_msgs__rosidl_typesupport_introspection_cpp;general;statistics_msgs::statistics_msgs__rosidl_typesupport_cpp;general;statistics_msgs::statistics_msgs__rosidl_generator_py;general;tracetools::tracetools;
 
 //Value Computed by CMake
 serial_controler_SOURCE_DIR:STATIC=/home/corb3/hover_controler/serial_controler
@@ -759,62 +662,12 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: COVERAGE_COMMAND
-COVERAGE_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
-COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_DEB
-CPACK_BINARY_DEB-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_FREEBSD
-CPACK_BINARY_FREEBSD-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_IFW
-CPACK_BINARY_IFW-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_NSIS
-CPACK_BINARY_NSIS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_RPM
-CPACK_BINARY_RPM-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_STGZ
-CPACK_BINARY_STGZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_TBZ2
-CPACK_BINARY_TBZ2-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_TGZ
-CPACK_BINARY_TGZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_TXZ
-CPACK_BINARY_TXZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_TZ
-CPACK_BINARY_TZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_RPM
-CPACK_SOURCE_RPM-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TBZ2
-CPACK_SOURCE_TBZ2-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TGZ
-CPACK_SOURCE_TGZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TXZ
-CPACK_SOURCE_TXZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TZ
-CPACK_SOURCE_TZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_ZIP
-CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
-CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
-CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: DART_TESTING_TIMEOUT
-DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //Details about finding FastRTPS
 FIND_PACKAGE_MESSAGE_DETAILS_FastRTPS:INTERNAL=[/opt/ros/humble/include][/opt/ros/humble/lib/libfastrtps.so;/opt/ros/humble/lib/libfastcdr.so][v()]
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcrypto.so][/usr/include][c ][v3.0.2()]
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.6()]
-//ADVANCED property for variable: GITCOMMAND
-GITCOMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MAKECOMMAND
-MAKECOMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MEMORYCHECK_COMMAND
-MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
-MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
 OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENSSL_INCLUDE_DIR
@@ -825,8 +678,6 @@ OPENSSL_SSL_LIBRARY-ADVANCED:INTERNAL=1
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: SITE
-SITE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: TINYXML2_INCLUDE_DIR
 TINYXML2_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: TINYXML2_LIBRARY
