@@ -18,40 +18,32 @@ void HoverComms::setup(const std::string &serial_device)
 {  
     serial_conn.Open(serial_device);
     serial_conn.SetBaudRate(BaudRate::BAUD_115200);
-    // serial_conn.SetCharacterSize( CHAR_SIZE_8 ); 
-    // serial_conn.SetParity( PARITY_NONE );
-    
-    // serial_conn_.(serial_device, baud_rate, serial::Timeout::simpleTimeout(timeout_ms));
-
 }
 
 
 SerialFeedback HoverComms::readValues()
 {
     u_int16_t start = 0;
-    char char0= 0;
-    char char1= 0;
     u_int8_t byte1;
     u_int8_t byte0;
     DataBuffer read_buffer;
-
-    do{
-        serial_conn.ReadByte(char0, 500);
-        byte0 = char0;
-        
-        u_int8_t test = u_int8_t(START_FRAME & 0xFF);
-        if  (byte0 == 205) {
-          serial_conn.ReadByte(char1, 500); 
-          byte1 = char1; 
-          start = ((uint16_t)byte1 << 8) | byte0;
-          std::cout << "Byte 0 "<< unsigned(byte0) << "  Byte 1 " << unsigned(byte1) << "  Start " << start  << " \n ";
-        }
-        
+    try
+    {
+        do{
+            serial_conn.ReadByte(byte0, 20);
+            if  (byte0 == 205) {
+            serial_conn.ReadByte(byte1, 5); 
+            start = ((uint16_t)byte1 << 8) | byte0;
+            } 
         }     
-    while (start != START_FRAME );
-        std::cout << "Byte 0 "<< unsigned(byte0) << "  Byte 1 " << unsigned(byte1) << "  Start " << start  << " sf " << START_FRAME << "\n";
-        serial_conn.Read(read_buffer, 20, 500);
-
+        while (start != START_FRAME );
+        serial_conn.Read(read_buffer, 20, 50);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << "Serial read fialure" << '\n';
+        return read_msg; //error!
+    }
         read_msg.start =  start;
         read_msg.cmd1=  (read_buffer[1] << 8) | read_buffer[0]; 
         read_msg.cmd2=  (read_buffer[3] << 8) | read_buffer[2]; 
@@ -65,7 +57,7 @@ SerialFeedback HoverComms::readValues()
         read_msg.checksum=  (read_buffer[19] << 8) | read_buffer[18]; 
 
 
-        if (read_msg.checksum != (uint16_t)(
+    if (read_msg.checksum != (uint16_t)(
         read_msg.start ^
         read_msg.cmd1 ^
         read_msg.cmd2 ^
@@ -76,11 +68,12 @@ SerialFeedback HoverComms::readValues()
         read_msg.batVoltage ^
         read_msg.boardTemp ^
         read_msg.cmdLed))
-        {
-                return read_msg; //error!
-        }
-        encoder_update(read_msg.wheelR_cnt, read_msg.wheelL_cnt);
-        return read_msg; //susess
+    {
+            std::cerr << "Serial checksum error" << '\n';
+            return read_msg; //error!
+    }
+    encoder_update(read_msg.wheelR_cnt, read_msg.wheelL_cnt);
+    return read_msg; //susess
 
     
 }
@@ -120,7 +113,16 @@ void HoverComms::setMotorValues(double joints [2])
         u_int8_t((write_msg.checksum >> 0) & 0xFF),  
         u_int8_t((write_msg.checksum >> 8) & 0xFF),
         };
-serial_conn.Write(bytes);
+    try
+        {
+        serial_conn.Write(bytes);
+        }
+    catch(const std::exception& e)
+        {
+                    std::cerr << "Serial write fialure" << '\n';
+        }
+
+
 }
 
 void HoverComms::encoder_update (int16_t right, int16_t left) {
