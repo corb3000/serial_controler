@@ -14,10 +14,19 @@
 using namespace LibSerial;
 
 
-void HoverComms::setup(const std::string &serial_device)
+void HoverComms::setup()
 {  
-    serial_conn.Open(serial_device);
-    serial_conn.SetBaudRate(BaudRate::BAUD_115200);
+    try
+    {
+        serial_conn.Open(DEFAULT_PORT);
+        serial_conn.SetBaudRate(BaudRate::BAUD_115200);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << "Serial setup failure " << e.what() << '\n';
+    }
+    
+
 }
 
 
@@ -41,7 +50,7 @@ SerialFeedback HoverComms::readValues()
     }
     catch(const std::exception& e)
     {
-        std::cerr << "Serial read fialure" << '\n';
+        std::cerr << "Serial read fialure " << e.what()  << '\n';
         return read_msg; //error!
     }
         read_msg.start =  start;
@@ -69,7 +78,7 @@ SerialFeedback HoverComms::readValues()
         read_msg.boardTemp ^
         read_msg.cmdLed))
     {
-            std::cerr << "Serial checksum error" << '\n';
+            std::cerr << "Serial checksum error "  << '\n';
             return read_msg; //error!
     }
     encoder_update(read_msg.wheelR_cnt, read_msg.wheelL_cnt);
@@ -119,7 +128,7 @@ void HoverComms::setMotorValues(double joints [2])
         }
     catch(const std::exception& e)
         {
-                    std::cerr << "Serial write fialure" << '\n';
+        std::cerr << "Serial write fialure " << e.what()  << '\n';
         }
 
 

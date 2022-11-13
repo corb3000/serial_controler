@@ -15,7 +15,7 @@ class HoverComms
  
 public:
  
-  void setup(const std::string &serial_device);
+  void setup();
   SerialFeedback readValues();
   void setMotorValues(double joints [2]);
   std::string sendMsg(const std::string &msg_to_send, bool print_output = false);
