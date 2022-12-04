@@ -8,8 +8,8 @@
 #include <chrono>
 #include <thread>
 
-#include "hover_comms.h"
-#include "config.h"
+#include "serial_controler/hover_comms.h"
+#include "serial_controler/config.h"
 
 using namespace LibSerial;
 
